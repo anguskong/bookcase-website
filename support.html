@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>Support - Bookcase</title>
+    <link rel="icon" type="image/png" href="bookcase-icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>Bookcase</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Support</h2>
+
+        <section>
+            <h3>Contact</h3>
+            <p>Questions or issues? Email us at <span class="contact" data-u="bookcase" data-d="arsci.com"><noscript>bookcase at arsci dot com</noscript></span></p>
+        </section>
+
+        <section>
+            <h3>Requirements</h3>
+            <p>Requires an iPhone with iOS 18.0 or later. Works in Canada and the United States.</p>
+        </section>
+
+        <section>
+            <h3>FAQ</h3>
+            <p><strong>How does it work?</strong><br>
+            Scan the barcode on the back of a book, or type the number above the barcode. No barcode? Point at the cover and tap the big button on the Scan tab to take one picture of it. The book joins your bookcase with its title, author, cover and value.</p>
+            <p><strong>How exact are the values?</strong><br>
+            Values are estimates from public prices; the site you sell on sets the real price.</p>
+            <p><strong>Do I need an account?</strong><br>
+            No. Bookcase has no account, no sign-in and no server of its own. Your list stays on your phone; only a book's number, or the words read from a cover, is sent to look the book up. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bookcase. All rights reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="support.html">Support</a></p>
+        </div>
+    </footer>
+    <script>
+        // Builds the contact link on load so no address sits in the page source.
+        document.querySelectorAll('.contact[data-u][data-d]').forEach(function (el) {
+            var address = el.dataset.u + String.fromCharCode(64) + el.dataset.d;
+            var link = document.createElement('a');
+            link.href = 'mail' + 'to:' + address;
+            link.textContent = address;
+            el.replaceChildren(link);
+        });
+    </script>
+</body>
+</html>
