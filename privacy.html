@@ -22,7 +22,7 @@
 
     <main class="container">
         <h2>Privacy Policy</h2>
-        <p><em>Last updated: October 27, 2026</em></p>
+        <p><em>Last updated: November 11, 2026</em></p>
 
         <section>
             <h3>Overview</h3>
@@ -31,16 +31,16 @@
 
         <section>
             <h3>What stays on your phone</h3>
-            <p>Everything you keep in Bookcase stays on your phone:</p>
+            <p>Bookcase stores these things locally on your phone:</p>
             <ul>
-                <li>your list of books, with their titles, authors, covers, copies and conditions; covers are kept on your phone so the bookcase shows them without a connection</li>
+                <li>your list of books, with their titles, authors, covers, copies and conditions; downloaded covers are cached on your phone so the bookcase can show them without a connection</li>
                 <li>the values, the prices you typed and your notes</li>
                 <li>your groups</li>
                 <li>small pictures of the covers of books you kept without a book number (below)</li>
                 <li>your settings, including the country you picked</li>
-                <li>the keys whoever set up the phone typed in or added from a keys link (the eBay secret is kept in the iPhone's Keychain); keys built into the app by whoever built it are part of the app itself and are never stored anywhere else</li>
+                <li>the keys whoever set up the phone typed in or added from a keys link (the eBay secret is kept in the iPhone's Keychain); keys built into the app by whoever built it are part of the app itself. Keys are also sent to their respective services when needed, as described below.</li>
             </ul>
-            <p>Bookcase has no account and no server of its own. Nothing you keep in it is sent to us.</p>
+            <p>Bookcase has no account and no developer-operated server. We do not receive your book collection, photos, notes or API keys. The app contacts the services below directly from your phone.</p>
         </section>
 
         <section>
@@ -48,44 +48,52 @@
             <p>To fill in a book's details and value, Bookcase sends the book's number (the number above the barcode) to these services:</p>
             <ul>
                 <li><strong>Open Library</strong> (openlibrary.org), to find the title, author and cover.</li>
-                <li><strong>Google Books</strong> (googleapis.com), to fill in missing details and the publisher's list price. If a Google key was added or built into the app, it is sent with the request, with the app's name (its bundle identifier) so the key works only for Bookcase. The country you picked is sent too, so the price is in the right dollars.</li>
-                <li><strong>Apple Books</strong> (itunes.apple.com), for the ebook price when Google Books has no price. Only the book's number and your country are sent; no key is needed.</li>
-                <li><strong>eBay</strong> (api.ebay.com), to see what used copies sell for, only if eBay keys were added or built into the app. The keys are sent to eBay to sign in, and the book's number and your country's eBay site are sent with each search.</li>
-                <li><strong>BooksRun</strong> (booksrun.com), to see what it pays for the book and what it sells a used copy for, only if a BooksRun key was added or built into the app. The key and the book's number are sent with each request; nothing else.</li>
+                <li><strong>Google Books</strong> (googleapis.com), to fill in missing details and the publisher's list price. Your selected country and the app's bundle identifier are sent with requests. If a Google key was added or built into the app, it is sent too.</li>
+                <li><strong>Apple Books</strong> (itunes.apple.com), for the ebook price when Google Books has no price. The book's number and your country are sent; no key is needed.</li>
+                <li><strong>eBay</strong> (api.ebay.com), to see the asking prices of used copies, only if eBay keys were added or built into the app. The keys are sent to eBay to sign in, and the book's number and your country's eBay site are sent with each search. These API results are current listings, not completed sales.</li>
+                <li><strong>BooksRun</strong> (booksrun.com), to see what it pays for the book and what it sells a used copy for, and to compare its marketplace sellers' asking prices, only if a BooksRun key was added or built into the app. The key and the book's number are sent with each request.</li>
             </ul>
-            <p>Covers are downloaded from the address those services give for each book.</p>
-            <p>When you tap the big button on the <strong>Scan</strong> tab (or, where there is no camera, choose a photo), Bookcase reads that one picture on your phone with the iPhone's own recognition: it looks for a barcode or a book number first, and if there is neither, for the words on the cover. The picture is never sent anywhere. A barcode or a number is looked up like any scanned book; otherwise only the words found (such as the title and the author's name) are sent to Open Library and Google Books (never to Apple Books), as a search, the same way a title typed into a website's search box would be. On an iPhone with Apple Intelligence, the phone's own assistant picks the title and author out of those words first; that happens on the phone too, and nothing from it is sent anywhere. Without a connection, <strong>Keep it for now</strong> keeps those words with the book on your phone, and the same search is sent once you're back online.</p>
-            <p>If the book can't be found and you keep it anyway, Bookcase keeps a small copy of that one picture with the book on your phone, so you can read its title from it later. It is small (about 20 KB) and kept only for a book without a book number: when the book gets its number, or you remove it, the picture is deleted. It is never put in your camera roll and never sent anywhere; the only way it leaves the phone is inside a copy of your books that you save yourself (below).</p>
-            <p>Each key is sent only to the service it belongs to. Like any website, these services see your phone's internet address when Bookcase asks them something. Their own privacy policies cover what they do with a request.</p>
-            <p>When none of them has a price, Bookcase makes a rough guess on the phone from what Open Library said about the book (its binding, length, age and subjects); nothing more is sent for it.</p>
-            <p>Nothing else leaves your phone: not your list, not your prices, not your notes, not the pictures of your books.</p>
+            <p>Covers are downloaded from the addresses those services give for each book.</p>
+            <p>When you tap the big button on the <strong>Scan</strong> tab (or, where there is no camera, choose a photo), Bookcase reads that one picture on your phone with the iPhone's own recognition: it looks for a barcode or a book number first, and if there is neither, for the words on the cover. The picture is not uploaded to those lookup services. A barcode or a number is looked up like any scanned book; otherwise only the words found (such as the title and the author's name) are sent to Open Library and Google Books (never to Apple Books), as a search. On an iPhone with Apple Intelligence, the phone's own assistant picks the title and author out of those words first; that happens on the phone too. Without a connection, <strong>Keep it for now</strong> keeps those words with the book on your phone, and the same search is sent once you're back online.</p>
+            <p>If the book cannot be found and you keep it without a book number, Bookcase can keep a small thumbnail of that picture with the book on your phone. When the book gets its number, or you remove it, the thumbnail is deleted. Bookcase does not put it in your camera roll or upload it to lookup providers. You can choose to include it in a backup or share it yourself, as below.</p>
+            <p>Each key is sent only to the service it belongs to. These services, and the servers that supply covers, see your phone's internet address and normal request information. Their own privacy policies cover what they do with those requests.</p>
+            <p>If you turn on <strong>Rough guesses</strong>, a book without a found price can receive a rough guess made on the phone from its binding, length, age and subjects. That calculation sends no extra request.</p>
+            <p>Bookcase does not upload your whole collection, typed prices, notes or kept cover pictures to us or the lookup providers. The book numbers and cover-search words described above are sent for the books being checked.</p>
+        </section>
+
+        <section>
+            <h3>Automatic checks and price comparisons</h3>
+            <p>Bookcase can repeat the requests above automatically to update prices while the app is active, including when you open or return to it. It also retries unfinished checks after connection or provider problems, and can check again after lookup keys change. You can request checks yourself too. The same book numbers, relevant country information and provider keys are sent; your notes, typed prices and kept cover pictures are not part of these requests.</p>
+            <p>Recent BooksRun seller offers are kept in a bounded cache in the app's memory and may be reused for up to 15 minutes to avoid another request when you open <strong>Compare asking prices</strong>. They are not saved in the book database or included in your spreadsheet or ZIP backup. <strong>Check BooksRun again</strong> asks for fresh results.</p>
+            <p>Links you tap can open BooksRun, Biblio, AbeBooks, ValoreBooks, BookScouter or eBay in your browser. BooksRun and AbeBooks comparison searches, and the BookScouter and eBay book links, include the book's number. Biblio and ValoreBooks comparison links open a page where you can enter it yourself. The comparison links carry no API key or affiliate tag, and Bookcase does not scrape those pages. Once a site is open, its own privacy policy and your browser settings apply; the site may use cookies or ask you to sign in. A browser link is not an automatic API integration with that site.</p>
         </section>
 
         <section>
             <h3>What Bookcase does not do</h3>
             <ul>
-                <li>No accounts and no sign-in.</li>
-                <li>No tracking, no analytics and no advertising.</li>
-                <li>No selling or sharing of your information.</li>
+                <li>No Bookcase accounts or sign-in.</li>
+                <li>No tracking, analytics or advertising in the app.</li>
+                <li>We do not sell your information or receive the lookup requests on a server of our own.</li>
             </ul>
         </section>
 
         <section>
             <h3>Files you make</h3>
-            <p>When you make a list or a spreadsheet on the <strong>Sell</strong> tab, or the copy of all your books, Bookcase makes a file and opens the share sheet. The file goes only where you send it: for example to Files, Mail, or a selling site you upload it to. When you add books from a spreadsheet, Bookcase reads the file you pick on the phone and sends nothing from it except each book's number, to look the book up as above.</p>
-            <p>A copy of all your books can include the small pictures of the books you kept from a photo, if you choose <strong>With photos</strong> or <strong>Only the photos</strong>; <strong>Without photos</strong> leaves them out. Like any file, it goes only where you send it. Adding such a file back reads its pictures on the phone and sends none of them.</p>
+            <p>When you make a list or a spreadsheet on the <strong>Sell</strong> tab, or a copy of all your books, Bookcase makes a file and opens the share sheet. The file goes where you send it: for example to Files, Mail, or a selling site you upload it to. When you add books from a spreadsheet, Bookcase reads the file you pick on the phone and looks up the books' numbers as above.</p>
+            <p>A copy of all your books can include the small pictures of the books you kept from a photo, if you choose <strong>With photos</strong> or <strong>Only the photos</strong>; <strong>Without photos</strong> leaves them out. Like any file, it goes where you send it. Adding such a file back reads its pictures on the phone and does not upload them to lookup providers.</p>
         </section>
 
         <section>
             <h3>The camera</h3>
-            <p>Bookcase uses the camera to read barcodes while the <strong>Scan</strong> tab is open, and to take one picture of the book in view when you tap the big button there. That picture is read on the phone (a barcode or a number first, else the words) and then let go; only the number or the words found are sent, as above. No video is recorded. A picture is kept only when you keep a book that could not be found, as described above, and it is never sent.</p>
+            <p>Bookcase uses the camera to read barcodes while the <strong>Scan</strong> tab is open, and to take one picture of the book in view when you tap the big button there. That picture is read on the phone and then let go unless you keep a book without a number as described above. Only the number or cover-search words are sent to lookup providers. No video is recorded. You can save or share a kept thumbnail through the options described above.</p>
         </section>
 
         <section>
             <h3>Deleting your information</h3>
             <ul>
                 <li>To remove one book, swipe it left on the <strong>Bookcase</strong> tab, or open it and tap <strong>Remove</strong>.</li>
-                <li>To remove everything, delete the Bookcase app from the phone. Its list, pictures, settings and keys go with it.</li>
+                <li>Deleting Bookcase removes its local collection, kept pictures and app settings. A secret you entered for eBay may remain in the iPhone's Keychain after the app is deleted. To remove that saved secret, clear <strong>Client secret</strong> under <strong>Settings → Keys and values → eBay</strong> before deleting the app.</li>
+                <li>Delete any files you saved or shared separately wherever you sent them. Removing a book or deleting the app does not remove those copies.</li>
             </ul>
         </section>
 
